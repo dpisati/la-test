@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #041220;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #00264e;
+}
+
+@layer components {
+  .one:hover span:last-child {
+    width: 100%;
+  }
+
+  .two:hover span {
+    width: 50%;
+  }
+
+  .three:hover span {
+    height: 100%;
+  }
+
+  .gradientBackground {
+    background: linear-gradient(
+      193.19deg,
+      #1a2f43 10.81%,
+      #163553 38.5%,
+      #183a5a 49.5%,
+      #1a2f43 82.27%,
+      #1a3044 82.27%
+    );
+  }
+}
