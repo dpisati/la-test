@@ -37,7 +37,7 @@ export default function ClientsSection() {
         <UserCard
           name="Tim Scullin"
           subtitle="Startup sailer and tech enthusiast"
-          review="“Passionate about technology and AI. A bit slow these days because of covid... 🥲 ”"
+          review="“Passionate about technology and AI. A bit slow these days because of covid 🥲 ”"
           picturePath={user3}
         />
       </div>
