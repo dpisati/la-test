@@ -43,9 +43,12 @@ export default function Header() {
           <Image
             className="ml-4"
             src={burger}
-            width={16}
+            width={17}
             height={17}
             alt="Hamburger menu"
+            sizes="(max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
           />
         </div>
       </header>

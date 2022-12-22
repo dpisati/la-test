@@ -15,7 +15,7 @@ export default function NotificationsSection() {
         />
       </div>
 
-      <div className="mb-20">
+      <div className="mb-20 flex flex-col items-center text-center lg:text-start lg:items-start">
         <h3 className="text-4xl font-bold">
           Get notified when <br /> conditions are <br /> perfect
         </h3>

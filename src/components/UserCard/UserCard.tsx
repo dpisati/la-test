@@ -16,7 +16,12 @@ export default function UserCard({
   return (
     <div className="max-w-[600px] flex flex-col justify-center bg-pw-grey-light/20 rounded-3xl px-6 py-5 ">
       <div className="flex align-center">
-        <Image src={picturePath} width={50} height={50} alt={`User picture`} />
+        <Image
+          src={picturePath}
+          width={50}
+          height={50}
+          alt={`User ${name} profile picture`}
+        />
         <div className="flex flex-col justify-center ml-3">
           <p className="text-pw-grey-light text-xs font-bold">{name}</p>
           <span className="text-pw-blue-light text-[11px]">{subtitle}</span>

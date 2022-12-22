@@ -31,6 +31,22 @@ body {
     height: 100%;
   }
 
+  .pw-white-layer {
+    position: relative;
+  }
+
+  .pw-white-layer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #243e58;
+    opacity: 0.8;
+    z-index: 8;
+  }
+
   .pw-button-gradient {
     background: linear-gradient(90deg, #1e72ef 0%, #2996fc 100%, #249dd6 100%);
   }

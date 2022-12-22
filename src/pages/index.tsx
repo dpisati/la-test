@@ -4,16 +4,18 @@ import { GetServerSideProps } from 'next';
 import { useEffect, useState } from 'react';
 
 import Head from 'next/head';
-import Image from 'next/image';
 import Header from '../components/Header';
 import HeroSection from '../components/sections/HeroSection';
 import OceanSection from '../components/sections/OceanSection';
 import ClientsSection from '../components/sections/ClientsSection';
 import NotificationsSection from '../components/sections/NotificationsSection';
 
-import mapBg from '../../public/images/map.png';
+import ObservationsSection from '../components/sections/ObservationsSection';
+import HeatMapSection from '../components/sections/HeatMapSection';
+import Footer from '../components/Footer';
 
-const appTypes = ['fishing', 'sailing'];
+const appTypes = ['fishing', 'sailing'] as const;
+export type appType = typeof appTypes[number];
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const { type } = req.cookies;
@@ -25,21 +27,20 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   };
 };
 
-export default function Home({ type }: { type: string }) {
+export default function Home({ type }: { type: appType }) {
   const { query } = useRouter();
-  const [storeType, setStoreType] = useState('');
-  console.log('🚀 ~ storeType', storeType);
+  const [storeType, setStoreType] = useState<appType>('sailing');
 
   useEffect(() => {
     const queryType = query?.type as string;
 
     if (queryType) {
       const lowerCaseType = queryType.toLowerCase();
-      const validType = appTypes.includes(lowerCaseType);
+      const validType = appTypes.find((item) => item === lowerCaseType);
 
       if (validType) {
         setCookie('type', lowerCaseType);
-        setStoreType(lowerCaseType);
+        setStoreType(lowerCaseType as appType);
       }
     } else if (type) {
       setStoreType(type);
@@ -58,22 +59,15 @@ export default function Home({ type }: { type: string }) {
       </Head>
 
       <Header />
-      <HeroSection />
+
+      <HeroSection type={storeType} />
       <ClientsSection />
-
-      <div className="relative flex aspect-video w-full flex-col items-center justify-center">
-        <Image
-          src={mapBg}
-          alt="Sea heat map"
-          quality={100}
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div>
-
+      <HeatMapSection />
       <NotificationsSection />
       <OceanSection />
+      <ObservationsSection />
+
+      <Footer />
     </div>
   );
 }
