@@ -1,11 +1,31 @@
 import Image from 'next/image';
 import logo from '../../../public/images/logo.svg';
 import burger from '../../../public/icons/burger.svg';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+  const [reducedNavBar, setReducedNavBar] = useState(false);
+
+  useEffect(() => {
+    const changeNavBackground = () => {
+      if (window.scrollY >= 120) {
+        setReducedNavBar(true);
+      } else {
+        setReducedNavBar(false);
+      }
+    };
+    window.addEventListener('scroll', changeNavBackground);
+
+    return () => window.removeEventListener('scroll', changeNavBackground);
+  }, []);
+
   return (
     <div className="fixed inset-x-0 top-0 w-100 z-10">
-      <header className="max-w-[1440px] mx-auto py-6 pl-20 pr-6 flex items-center justify-between z-10">
+      <header
+        className={`max-w-[1440px] mx-auto px-6 lg:pl-20 lg:pr-10 flex items-center justify-between z-10 transition-all ${
+          reducedNavBar ? 'py-6 backdrop-blur-lg drop-shadow-md' : 'py-12'
+        }`}
+      >
         <Image src={logo} height={30} alt="PredictWind" />
 
         <div className="flex text-pw-grey-light">
