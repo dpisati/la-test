@@ -16,10 +16,10 @@ export default function NotificationsSection() {
       </div>
 
       <div className="mb-20 flex flex-col items-center text-center lg:text-start lg:items-start">
-        <h3 className="text-4xl font-bold">
+        <h3 className="text-2xl lg:text-4xl font-bold">
           Get notified when <br /> conditions are <br /> perfect
         </h3>
-        <p className="text-lg mt-10">
+        <p className="text-sm lg:text-lg mt-10">
           Set your preferences and relax. We’ll send you <strong>Alerts</strong>
           <br /> when conditions are just the way you like them.
         </p>

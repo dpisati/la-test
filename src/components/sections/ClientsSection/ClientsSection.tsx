@@ -13,8 +13,8 @@ import CompanyLogo from '../../CompanyLogo';
 
 export default function ClientsSection() {
   return (
-    <div className="flex flex-col items-center justify-center py-28 px-6 md:px-28 font-bold relative pw-gradient-background">
-      <h2 className="text-pw-grey-light text-2xl md:text-4xl">
+    <div className="flex flex-col items-center justify-center py-12 lg:py-28 px-6 md:px-28 font-bold relative pw-gradient-background">
+      <h2 className="text-pw-grey-light text-center text-2xl md:text-4xl">
         Join 1M+ marine users worldwide
       </h2>
 

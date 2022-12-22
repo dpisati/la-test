@@ -6,7 +6,7 @@ import closeIcon from '../../../../public/icons/closeIcon.svg';
 
 export default function HeatMapSection() {
   return (
-    <div className="relative h-[820px] flex aspect-video w-full flex-col items-center justify-center">
+    <div className="relative lg:h-[820px] flex aspect-video w-full flex-col items-center justify-center">
       <Image
         src={mapBg}
         alt="Sea heat map"

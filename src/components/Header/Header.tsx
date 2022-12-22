@@ -22,8 +22,10 @@ export default function Header() {
   return (
     <div className="fixed inset-x-0 top-0 w-100 z-10">
       <header
-        className={`max-w-[1440px] mx-auto px-6 lg:pl-20 lg:pr-10 flex items-center justify-between z-10 transition-all ${
-          reducedNavBar ? 'py-6 backdrop-blur-lg drop-shadow-md' : 'py-12'
+        className={`max-w-[1440px] mx-auto px-6 flex items-center justify-between z-10 transition-all lg:pr-10 lg:pl-20 ${
+          reducedNavBar
+            ? 'py-4 lg:py-6 backdrop-blur-lg drop-shadow-md'
+            : 'py-6 lg:py-12'
         }`}
       >
         <Image src={logo} height={30} alt="PredictWind" />
@@ -57,7 +59,7 @@ export default function Header() {
             name="search"
             id="searchInput"
             placeholder="Search"
-            className="w-[148px] h-8 ml-8 px-4 text-base bg-transparent rounded-full border-[1px] border-pw-grey-light border-solid placeholder:text-base placeholder:text-pw-grey-light backdrop-blur-md"
+            className="w-[100px] sm:w-[148px] h-8 ml-8 px-4 text-base bg-transparent rounded-full border-[1px] border-pw-grey-light border-solid placeholder:text-base placeholder:text-pw-grey-light backdrop-blur-md"
           />
 
           <Image
@@ -66,9 +68,6 @@ export default function Header() {
             width={17}
             height={17}
             alt="Hamburger menu"
-            sizes="(max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            33vw"
           />
         </div>
       </header>

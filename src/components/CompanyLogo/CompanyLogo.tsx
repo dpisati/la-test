@@ -14,16 +14,13 @@ export default function CompanyLogo({
   return (
     <>
       {!hasBackground ? (
-        <div className="max-w-[200px] relative flex aspect-video w-full max-h-15 flex-col items-center justify-center">
+        <div className="max-w-[200px] max-h-[70px] relative flex aspect-video w-full max-h-15 flex-col items-center justify-center">
           <Image
             className="grayscale-0"
             src={logoPath}
             alt={alt}
             quality={100}
             fill
-            sizes="(max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            33vw"
             style={{
               objectFit: 'contain',
             }}
@@ -31,15 +28,12 @@ export default function CompanyLogo({
           <div className="w-full h-full bg-gray-400 mix-blend-darken"></div>
         </div>
       ) : (
-        <div className="max-w-[300px] relative flex aspect-video w-full max-h-15 flex-col items-center justify-center mix-blend-lighten opacity-70">
+        <div className="max-w-[200px] max-h-[70px] relative flex aspect-video w-full max-h-15 flex-col items-center justify-center mix-blend-lighten opacity-70">
           <Image
             src={logoPath}
             alt={alt}
             quality={100}
             fill
-            sizes="(max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            33vw"
             style={{
               objectFit: 'contain',
             }}

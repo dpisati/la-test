@@ -17,8 +17,10 @@ export default function ObservationsSection() {
       </div>
 
       <div className="mb-20 flex flex-col text-center lg:text-start items-center lg:items-start z-10">
-        <h3 className="text-4xl font-bold">Know before you head out</h3>
-        <p className="text-lg mt-10">
+        <h3 className="text-2xl lg:text-4xl font-bold">
+          Know before you head out
+        </h3>
+        <p className="text-sm lg:text-lg mt-10">
           See what’s happening right now on the water with
           <br /> over 20,000 live weather <strong>Observations</strong>.
         </p>
