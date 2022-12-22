@@ -20,7 +20,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="fixed inset-x-0 top-0 w-100 z-10">
+    <div className="fixed inset-x-0 top-0 w-100 z-50">
       <header
         className={`max-w-[1440px] mx-auto px-6 flex items-center justify-between z-10 transition-all lg:pr-10 lg:pl-20 ${
           reducedNavBar
