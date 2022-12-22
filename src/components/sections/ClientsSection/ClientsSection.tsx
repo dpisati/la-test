@@ -1,6 +1,10 @@
 import UserCard from '../../UserCard';
+import CompanyLogo from '../../CompanyLogo';
+
 import user1 from '../../../../public/users/user1.png';
 import user2 from '../../../../public/users/user2.png';
+import user3 from '../../../../public/users/user3.png';
+
 import bAndG from '../../../../public/companies/bAndG.svg';
 import emirates from '../../../../public/companies/emirates.svg';
 import oceanNavigator from '../../../../public/companies/oceanNavigator.svg';
@@ -9,7 +13,6 @@ import raymarine from '../../../../public/companies/raymarine.svg';
 import sailWorld from '../../../../public/companies/sailWorld.svg';
 import saltyDawg from '../../../../public/companies/saltyDawg.svg';
 import seven from '../../../../public/companies/seven.svg';
-import CompanyLogo from '../../CompanyLogo';
 
 export default function ClientsSection() {
   return (
@@ -32,10 +35,10 @@ export default function ClientsSection() {
           picturePath={user2}
         />
         <UserCard
-          name="Nathan Outteridge"
-          subtitle="9x World Champion, Olympic Gold Medalist"
-          review="“The most used app on my phone, Don’t know what I’d do without it.”"
-          picturePath={user1}
+          name="Tim Scullin"
+          subtitle="Startup sailer and tech enthusiast"
+          review="“Passionate about technology and AI. A bit slow these days because of covid... 🥲 ”"
+          picturePath={user3}
         />
       </div>
 
