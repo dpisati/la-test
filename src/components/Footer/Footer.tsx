@@ -19,7 +19,7 @@ export default function Footer() {
 
       <div className="flex items-center">
         <p className="text-sm mr-2">Copyright © 2022</p>
-        <a href="https://la.agency/" target="_blank">
+        <a href="https://la.agency/" rel="noreferrer" target="_blank">
           LA Agency
         </a>
       </div>
