@@ -37,7 +37,7 @@ export default function Header() {
             name="search"
             id="searchInput"
             placeholder="Search"
-            className="w-[148px] h-8 ml-4 px-4 text-base bg-transparent rounded-full border-[1px] border-pw-grey-light border-solid placeholder:text-base placeholder:text-pw-grey-light backdrop-blur-md"
+            className="w-[148px] h-8 ml-8 px-4 text-base bg-transparent rounded-full border-[1px] border-pw-grey-light border-solid placeholder:text-base placeholder:text-pw-grey-light backdrop-blur-md"
           />
 
           <Image

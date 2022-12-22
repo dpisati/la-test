@@ -14,7 +14,7 @@ export default function UserCard({
   picturePath,
 }: UserCardProps) {
   return (
-    <div className="max-w-[350px] flex flex-col justify-center bg-pw-grey-light/20 rounded-3xl px-6 py-5 ">
+    <div className="max-w-[600px] flex flex-col justify-center bg-pw-grey-light/20 rounded-3xl px-6 py-5 ">
       <div className="flex align-center">
         <Image src={picturePath} width={50} height={50} alt={`User picture`} />
         <div className="flex flex-col justify-center ml-3">

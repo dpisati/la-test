@@ -31,7 +31,11 @@ body {
     height: 100%;
   }
 
-  .gradientBackground {
+  .pw-button-gradient {
+    background: linear-gradient(90deg, #1e72ef 0%, #2996fc 100%, #249dd6 100%);
+  }
+
+  .pw-gradient-background {
     background: linear-gradient(
       193.19deg,
       #1a2f43 10.81%,
